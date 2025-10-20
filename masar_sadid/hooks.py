@@ -26,10 +26,12 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/masar_sadid/css/masar_sadid.css"
+app_include_css = "/assets/masar_sadid/css/theme.css"
 # app_include_js = "/assets/masar_sadid/js/masar_sadid.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/masar_sadid/css/masar_sadid.css"
+web_include_css = "/assets/masar_sadid/css/theme.css"
 # web_include_js = "/assets/masar_sadid/js/masar_sadid.js"
 
 # include custom scss in every website theme (without file extension ".scss")
