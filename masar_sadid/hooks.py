@@ -243,4 +243,12 @@ web_include_css = "/assets/masar_sadid/css/theme.css"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
+fixtures = [
+    {"dt": "Custom Field", "filters": [
+        [
+            "name", "in", [
+               "Journal Entry-custom_user_remark_ar"
+            ]
+        ]
+    ]}
+    ]
