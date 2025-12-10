@@ -22,9 +22,9 @@ frappe.ui.form.on("Journal Entry", {
 
 frappe.ui.form.on("Journal Entry", {
     custom_user_remark_ar: function(frm) {
-        if (frm.doc.user_remark) {
+        if (frm.doc.custom_user_remark_ar) {
             frappe.call({
-                method: "masar_sadid.api.translate_to_engish",
+                method: "masar_sadid.api.translate_to_english",
                 args: {
                     text: frm.doc.custom_user_remark_ar
                 },
