@@ -15,3 +15,21 @@ def translate_to_arabic(text):
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "Translation Error")
         return "Translation failed"
+
+
+
+
+@frappe.whitelist()
+def translate_to_english(text):
+    """Translate Arabic text to English using free Google Translate"""
+    if not text:
+        return ""
+
+    try:
+        translator = Translator()
+        translated = translator.translate(text, src='ar', dest='en')
+        return translated.text
+
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Translation Error")
+        return "Translation failed"

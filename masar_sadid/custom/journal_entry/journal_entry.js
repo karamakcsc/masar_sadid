@@ -17,3 +17,25 @@ frappe.ui.form.on("Journal Entry", {
         }
     }
 });
+
+
+
+frappe.ui.form.on("Journal Entry", {
+    custom_user_remark_ar: function(frm) {
+        if (frm.doc.user_remark) {
+            frappe.call({
+                method: "masar_sadid.api.translate_to_engish",
+                args: {
+                    text: frm.doc.custom_user_remark_ar
+                },
+                callback: function(r) {
+                    if (r.message) {
+                        frm.set_value("user_remark", r.message);
+                    }
+                }
+            });
+        } else {
+            frm.set_value("user_remark", "");
+        }
+    }
+});
